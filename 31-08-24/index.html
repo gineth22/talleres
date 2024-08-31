@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>
+        FORMULARIO DE INSCRIPCION
+    </title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="2" align="center">
+                Inscripciones
+            </td>
+            <tr>
+                <td>Nombre</td>
+                <td>
+                    <input type="text" name="nombre"/>
+                </td>
+            </tr>
+            <tr>
+                    <td>Genero</td><td>
+                        <select name="Genero">
+                        <option value="femenino">femenino</option>
+                        <option value="masculino">masculino</option>
+                        <option value="otro">otro</option>
+                        <select></select></td>
+                    
+            </tr>
+        </tr>
+        <tr>
+            <td>edad</td>
+         <td><input type="number" name=" edad"></td>   
+        </tr>
+        <tr>
+            <td>estado civil</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>soltero</td>
+                        <td>casado</td>
+                        <td>union libre</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name=" estado" value="soltero"></td>
+                        <td><input type="radio" name=" estado" value="casado"></td>
+                        <td><input type="radio" name=" estado" value="union libre"></td>
+
+                        
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table>
+                    <tr><td>gustos musicales</td></tr>
+                    <tr>
+                        <td>vallenato</td><td>salsa</td><td>rock</td><td>pop</td></tr>
+                        <tr>
+                        <td><input type="checkbox" name="vallenato" value="vallenato"></td>
+                        <td><input type="checkbox" name="salsa" value="salsa"></td>
+                        <td><input type="checkbox" name="rock" value="rock"></td>
+                        <td><input type="checkbox" name="pop" value="pop"></td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+        <td colspan="2" align="center">
+            <input type="button" value="guardar"/>
+        </td>
+        </tr>
+    </table>
+</body>
+</html>
