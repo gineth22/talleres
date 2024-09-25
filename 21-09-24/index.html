@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function calcularPromedio() {
+        var notaUno = parseFloat(document.getElementById("notaUno").value);
+        var notaDos = parseFloat(document.getElementById("notaDos").value);
+        var notaTres = parseFloat(document.getElementById("notaTres").value);
+
+        var promedio = ((notaUno + notaDos + notaTres) / 3) * 0.7;
+
+        alert(promedio);
+        document.getElementById("promedio").value = promedio;
+      }
+
+      function calcularNotaFinal() {
+        var notaTreinta = parseFloat(
+          document.getElementById("notaTreinta").value
+        );
+        var promedio = parseFloat(document.getElementById("promedio").value);
+
+        var notaTreintaPorc = notaTreinta * 0.3;
+
+        document.getElementById("mostrarTreinta").value = notaTreintaPorc;
+
+        var totalFinal = promedio + notaTreintaPorc;
+
+        document.getElementById("definitiva").value = totalFinal;
+
+        if (totalFinal >= 3) {
+          alert("Usted aprobó la materia");
+        } else if (totalFinal >= 2 && totalFinal < 3) {
+          alert("Usted puede habilitar la materia");
+        } else {
+          alert("Usted perdió la materia");
+        }
+      }
+
+      function calcularSuma() {
+        var num1 = parseFloat(document.getElementById("numSuma1").value);
+        var num2 = parseFloat(document.getElementById("numSuma2").value);
+        var resultado = num1 + num2;
+        document.getElementById("resultadoSuma").textContent =
+          "Resultado: " + resultado;
+      }
+
+      function calcularMultiplicacion() {
+        var numMultiplicando = parseFloat(
+          document.getElementById("numMultiplicando").value
+        );
+        var numMultiplicador = parseFloat(
+          document.getElementById("numMultiplicador").value
+        );
+
+        if (numMultiplicando % 2 !== 0 || numMultiplicador % 2 !== 0) {
+          document.getElementById("resultadoMultiplicacion").textContent =
+            "Ambos números deben ser pares.";
+          return;
+        }
+
+        var resultado = numMultiplicando * numMultiplicador;
+        document.getElementById("resultadoMultiplicacion").textContent =
+          "Resultado: " + resultado;
+      }
+
+      function calcularResta() {
+        var edadA = parseInt(document.getElementById("edadA").value);
+        var edadB = parseInt(document.getElementById("edadB").value);
+        var edadC = parseInt(document.getElementById("edadC").value);
+        var diferenciaAB = edadA - edadB;
+        var diferenciaAC = edadA - edadC;
+        var diferenciaBC = edadB - edadC;
+        document.getElementById(
+          "resultadoResta"
+        ).textContent = `Diferencias: A-B: ${diferenciaAB}, A-C: ${diferenciaAC}, B-C: ${diferenciaBC}`;
+      }
+
+      function calcularDivision() {
+        var dividendo = parseFloat(
+          document.getElementById("numDividendo").value
+        );
+        var divisor = parseFloat(document.getElementById("numDivisor").value);
+        var resultado;
+        if (divisor === 0) {
+          resultado = "No se puede dividir entre cero.";
+        } else {
+          resultado = dividendo / divisor;
+        }
+        document.getElementById("resultadoDivision").textContent =
+          "Resultado: " + resultado;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="">
+        <div >
+          <img
+            src="/07-09-24/images/logo.png"
+            style="width: 200px; height: 200px"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="" style="height: 500px">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          style="height: 500px"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://www.intertek.com.co/uploadedImages/wwwintertekcom/Industries/Products_and_Retail/_Images/textiles-apparel%20homepage%20banner.jpg"
+                class="d-block w-100"
+                style="height: 500px"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://lh6.googleusercontent.com/cyZKhSREggd3RA-wS4QQSR8R9LHlHTNBuNBCcDEq_3-9WM59RyzAc6ebjuRpMWh8W7bERAUmwEIpl5KgEGDskCc4-KUioqI3wUKyRiOpmq_Ttg-V4CTR9Tq_eoxV2CzxeZGso4Sg8VuFYEq51xsxcuw"
+                class="d-block w-100"
+                style="height: 500px"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://img.freepik.com/fotos-premium/tienda-ropa-ropa-mujer-productos-diversos_943281-26815.jpg"
+                class="d-block w-100"
+                style="height: 500px"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item text-center">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseUno"
+                aria-expanded="true"
+                aria-controls="collapseUno"
+              >
+                Calcular Definitiva
+              </button>
+            </h2>
+            <div
+              id="collapseUno"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <form class="row g-3">
+                  <div class="mb-3 col-md-4">
+                    <label for="notaUno" class="form-label"
+                      >Ingrese nota 1</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="notaUno"
+                      placeholder="Nota uno"
+                    />
+                  </div>
+                  <div class="mb-3 col-md-4">
+                    <label for="notaDos" class="form-label"
+                      >Ingrese nota 2</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="notaDos"
+                      placeholder="Nota dos"
+                    />
+                  </div>
+                  <div class="mb-3 col-md-4">
+                    <label for="notaTres" class="form-label"
+                      >Ingrese nota 3</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="notaTres"
+                      placeholder="Nota tres"
+                    />
+                  </div>
+                  <div class="mb-3 col-md-4">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      onclick="calcularPromedio()"
+                    >
+                      Calcular setenta
+                    </button>
+                  </div>
+                  <div class="mb-3 col-md-4">
+                    <label for="promedio" class="form-label">Setenta</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="promedio"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3 col-md-4">
+                    <label for="notaTreinta" class="form-label"
+                      >Ingrese nota de 30%</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="notaTreinta"
+                    />
+                  </div>
+                  <div class="mb-3 col-md-4">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      onclick="calcularNotaFinal()"
+                    >
+                      Calcular Nota Final
+                    </button>
+                  </div>
+                  <div class="mb-3 col-md-4">
+                    <label for="mostrarTreinta" class="form-label"
+                      >Nota de 30%</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mostrarTreinta"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3 col-md-4">
+                    <label for="definitiva" class="form-label"
+                      >Nota Final</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="definitiva"
+                      readonly
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-5">
+            <div class="row text-center mb-4"></div>
+
+            <div class="row text-center">
+              <div class="col-md-3">
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSuma"
+                  aria-expanded="false"
+                  aria-controls="collapseSuma"
+                >
+                  Sumar
+                </button>
+                <div class="collapse mt-2" id="collapseSuma">
+                  <div class="card">
+                    <div class="card-body">
+                      <label for="numSuma1" class="form-label">Número 1</label>
+                      <input type="number" class="form-control" id="numSuma1" />
+                      <label for="numSuma2" class="form-label">Número 2</label>
+                      <input type="number" class="form-control" id="numSuma2" />
+                      <button
+                        class="btn btn-primary mt-2"
+                        onclick="calcularSuma()"
+                      >
+                        Calcular
+                      </button>
+                      <div id="resultadoSuma" class="mt-2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseMultiplicacion"
+                  aria-expanded="false"
+                  aria-controls="collapseMultiplicacion"
+                >
+                  Multiplicar
+                </button>
+                <div class="collapse mt-2" id="collapseMultiplicacion">
+                  <div class="card">
+                    <div class="card-body">
+                      <label for="numMultiplicando" class="form-label"
+                        >Multiplicando</label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="numMultiplicando"
+                      />
+                      <label for="numMultiplicador" class="form-label"
+                        >Multiplicador</label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="numMultiplicador"
+                      />
+                      <button
+                        class="btn btn-primary mt-2"
+                        onclick="calcularMultiplicacion()"
+                      >
+                        Calcular
+                      </button>
+                      <div id="resultadoMultiplicacion" class="mt-2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseResta"
+                  aria-expanded="false"
+                  aria-controls="collapseResta"
+                >
+                  Resta
+                </button>
+                <div class="collapse mt-2" id="collapseResta">
+                  <div class="card">
+                    <div class="card-body">
+                      <label for="edadA" class="form-label">Edad A</label>
+                      <input type="number" class="form-control" id="edadA" />
+                      <label for="edadB" class="form-label">Edad B</label>
+                      <input type="number" class="form-control" id="edadB" />
+                      <label for="edadC" class="form-label">Edad C</label>
+                      <input type="number" class="form-control" id="edadC" />
+                      <button
+                        class="btn btn-primary mt-2"
+                        onclick="calcularResta()"
+                      >
+                        Calcular
+                      </button>
+                      <div id="resultadoResta" class="mt-2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseDivision"
+                  aria-expanded="false"
+                  aria-controls="collapseDivision"
+                >
+                  División
+                </button>
+                <div class="collapse mt-2" id="collapseDivision">
+                  <div class="card">
+                    <div class="card-body">
+                      <label for="numDividendo" class="form-label"
+                        >Dividendo</label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="numDividendo"
+                      />
+                      <label for="numDivisor" class="form-label">Divisor</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="numDivisor"
+                      />
+                      <button
+                        class="btn btn-primary mt-2"
+                        onclick="calcularDivision()"
+                      >
+                        Calcular
+                      </button>
+                      <div id="resultadoDivision" class="mt-2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
